@@ -3,6 +3,8 @@ import FormInput from "../form-input/form-input.component";
 import "./sign-up.styles.scss";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.util";
 import CustomButton from "../custom-button/custom-button.component";
+
+import { withRouter } from "react-router-dom";
 class SignUp extends React.Component {
   state = { username: "", email: "", password: "", password_confirmation: "" };
 
@@ -29,6 +31,7 @@ class SignUp extends React.Component {
         password: "",
         password_confirmation: "",
       });
+      this.props.history.push("/");
     } catch (error) {
       console.log(error);
     }
@@ -79,4 +82,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default withRouter(SignUp);
