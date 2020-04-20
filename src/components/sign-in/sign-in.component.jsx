@@ -15,7 +15,6 @@ class SignIn extends Component {
     try {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({ email: "", password: "" });
-      this.props.history.push("/");
     } catch (error) {
       console.log(error);
     }
