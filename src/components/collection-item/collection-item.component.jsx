@@ -14,6 +14,7 @@ const CollectionItem = ({ id, name, price, imageUrl, addItem, removeItem }) => (
     <CustomButton
       inverted
       onClick={() => {
+        console.log("haha", id);
         addItem({ name, id, price, imageUrl });
       }}
     >
