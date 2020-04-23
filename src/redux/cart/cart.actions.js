@@ -19,3 +19,10 @@ export const removeItem = (item) => {
     payload: item,
   };
 };
+
+export const removeItemFromCart = (item) => {
+  return {
+    type: cartActionTypes.REMOVE_ITEM_FROM_CART,
+    payload: item,
+  };
+};
