@@ -4,7 +4,7 @@ import CustomButton from "../custom-button/custom-button.component";
 import { connect } from "react-redux";
 import * as cartActions from "../../redux/cart/cart.actions";
 
-const CollectionItem = ({ id, name, price, imageUrl, addItem, removeItem }) => (
+const CollectionItem = ({ id, name, price, imageUrl, addItem }) => (
   <div className="collection-item">
     <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
     <div className="collection-footer">
