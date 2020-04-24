@@ -19,7 +19,7 @@ class SignIn extends Component {
     try {
       await auth.signInWithEmailAndPassword(email, password);
 
-      toast("You are successfully signed in!", {
+      toast(" ✅  You are successfully signed in!", {
         className: css({
           background: "black",
         }),

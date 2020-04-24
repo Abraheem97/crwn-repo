@@ -56,7 +56,6 @@ class App extends React.Component {
         <ToastContainer
           autoClose={2000}
           toastClassName="dark-toast"
-          hideProgressBar
           closeButton={false}
         />
       </div>

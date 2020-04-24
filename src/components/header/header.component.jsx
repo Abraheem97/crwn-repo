@@ -24,7 +24,7 @@ const Header = ({ currentUser, cartIsHidden }) => (
         <div
           className="option"
           onClick={() => {
-            toast("You are successfully signed out!", {
+            toast("💤  You are successfully signed out!", {
               className: css({
                 background: "white",
               }),
