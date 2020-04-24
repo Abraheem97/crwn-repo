@@ -28,4 +28,19 @@
     margin-left: auto;
     font-size: 36px;
   }
+
+  .test-warning {
+    color: red;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+  }
+  .empty-message {
+    font-size: 30px;
+    margin: 50px auto;
+  }
+  button {
+    margin-left: auto;
+    margin-top: 50px;
+  }
 }
