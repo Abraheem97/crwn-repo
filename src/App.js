@@ -10,6 +10,7 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.util";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import Checkout from "./components/checkout/checkout.component";
+import { ToastContainer } from "react-toastify";
 
 class App extends React.Component {
   unsubscribefromAuth = null;
@@ -52,6 +53,12 @@ class App extends React.Component {
             }
           />
         </Switch>
+        <ToastContainer
+          autoClose={2000}
+          toastClassName="dark-toast"
+          hideProgressBar
+          closeButton={false}
+        />
       </div>
     );
   }

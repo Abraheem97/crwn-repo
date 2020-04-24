@@ -8,6 +8,8 @@ import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { toast } from "react-toastify";
+import { css } from "glamor";
 const Header = ({ currentUser, cartIsHidden }) => (
   <div className="header">
     <Link to="/">
@@ -19,11 +21,27 @@ const Header = ({ currentUser, cartIsHidden }) => (
         SHOP
       </Link>
       {currentUser ? (
-        <div className="option" onClick={() => auth.signOut()}>
+        <div
+          className="option"
+          onClick={() => {
+            toast("You are successfully signed out!", {
+              className: css({
+                background: "white",
+              }),
+              bodyClassName: css({
+                fontSize: "22px",
+                fontFamily: "Open Sans Condensed",
+                fontWeight: "bold",
+                color: "#5b5959",
+              }),
+            });
+            auth.signOut();
+          }}
+        >
           SIGN OUT
         </div>
       ) : (
-        <Link className="option" to="login">
+        <Link className="option" to="/login">
           SIGN IN
         </Link>
       )}

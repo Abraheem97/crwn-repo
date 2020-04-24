@@ -5,6 +5,9 @@ import CustomButton from "../custom-button/custom-button.component";
 import { signInWithGoogle } from "../../firebase/firebase.util";
 import { auth } from "../../firebase/firebase.util";
 import { withRouter } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import { css } from "glamor";
 
 class SignIn extends Component {
   state = { email: "", password: "" };
@@ -15,6 +18,18 @@ class SignIn extends Component {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
+
+      toast("You are successfully signed in!", {
+        className: css({
+          background: "black",
+        }),
+        bodyClassName: css({
+          fontSize: "22px",
+          fontFamily: "Open Sans Condensed",
+          fontWeight: "bold",
+          color: "#5b5959",
+        }),
+      });
       this.setState({ email: "", password: "" });
     } catch (error) {
       console.log(error);
