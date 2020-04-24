@@ -27,7 +27,7 @@ class SignIn extends Component {
           fontSize: "22px",
           fontFamily: "Open Sans Condensed",
           fontWeight: "bold",
-          color: "#5b5959",
+          color: "white",
         }),
       });
       this.setState({ email: "", password: "" });
